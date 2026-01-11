@@ -30,3 +30,13 @@ set laststatus=2
 
 " line numbers
 set number
+
+" vim-tmux-navigator - seamless navigation between vim and tmux panes
+" Ctrl-h/j/k/l to move between splits (works across vim and tmux)
+" Install plugin: https://github.com/christoomey/vim-tmux-navigator
+let g:tmux_navigator_no_mappings = 1
+nnoremap <silent> <C-h> :TmuxNavigateLeft<CR>
+nnoremap <silent> <C-j> :TmuxNavigateDown<CR>
+nnoremap <silent> <C-k> :TmuxNavigateUp<CR>
+nnoremap <silent> <C-l> :TmuxNavigateRight<CR>
+nnoremap <silent> <C-\> :TmuxNavigatePrevious<CR>

@@ -93,8 +93,11 @@ stow -n -v tmux
 | `Ctrl-a r` | Reload config |
 | `Ctrl-a \|` | Split vertical |
 | `Ctrl-a -` | Split horizontal |
-| `Ctrl-a h/j/k/l` | Navigate panes |
+| `Ctrl-h/j/k/l` | Navigate panes (no prefix, works in vim too!) |
 | `Ctrl-a H/J/K/L` | Resize panes |
+| `Ctrl-a o` | Session picker (sessionx) |
+| `Ctrl-a f` | Floating pane toggle (floax) |
+| `Ctrl-a Space` | Quick copy mode (thumbs) - select URLs, paths, etc. |
 | `Ctrl-a [` | Enter copy mode |
 | `v` (copy mode) | Begin selection |
 | `y` (copy mode) | Copy to system clipboard |
@@ -104,8 +107,17 @@ stow -n -v tmux
 - [tmux-sensible](https://github.com/tmux-plugins/tmux-sensible) - Sensible defaults
 - [tmux-resurrect](https://github.com/tmux-plugins/tmux-resurrect) - Save/restore sessions
 - [tmux-continuum](https://github.com/tmux-plugins/tmux-continuum) - Auto-save sessions
+- [tmux-sessionx](https://github.com/omerxx/tmux-sessionx) - Fuzzy session/window picker
+- [tmux-floax](https://github.com/omerxx/tmux-floax) - Floating popup panes
+- [tmux-thumbs](https://github.com/fcsonline/tmux-thumbs) - Quick copy URLs, paths, hashes
+- [catppuccin/tmux](https://github.com/catppuccin/tmux) - Beautiful Mocha theme
 
 Install plugins inside tmux: `Ctrl-a I`
+
+### vim-tmux-navigator
+
+Seamlessly navigate between vim splits and tmux panes with `Ctrl-h/j/k/l`.
+No prefix needed - works identically in both vim and tmux.
 
 ## Adding a New Package
 
