@@ -19,6 +19,7 @@ declare -a PACKAGES=(
     "bash"
     "vim"
     "tmux"
+    "ghostty"
 )
 
 stow "${PACKAGES[@]}"
