@@ -31,4 +31,13 @@ if [[ ! -d "$HOME/.tmux/plugins/tpm" ]]; then
     echo "Run 'prefix + I' inside tmux to install plugins"
 fi
 
+# Symlink Claude Code skills
+if [[ -d "$HOME/.claude/commands" ]]; then
+    echo "Installing Claude Code skills..."
+    for skill in "$DOTFILES_DIR"/claude/commands/*.md; do
+        [[ -e "$skill" ]] || continue
+        ln -sf "$skill" "$HOME/.claude/commands/"
+    done
+fi
+
 echo "Done! Restart your shell or run: source ~/.bashrc"
