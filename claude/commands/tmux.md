@@ -1,4 +1,5 @@
 ---
+name: tmux
 description: Control tmux with natural language
 ---
 

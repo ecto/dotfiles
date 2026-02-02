@@ -1,4 +1,5 @@
 ---
+name: rams
 description: Run accessibility and visual design review
 ---
 
