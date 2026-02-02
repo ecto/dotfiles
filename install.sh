@@ -40,4 +40,16 @@ if [[ -d "$HOME/.claude/commands" ]]; then
     done
 fi
 
+# Symlink Codex skills
+if [[ -d "$HOME/.codex/skills" ]]; then
+    echo "Installing Codex skills..."
+    for skill in "$DOTFILES_DIR"/claude/commands/*.md; do
+        [[ -e "$skill" ]] || continue
+        skill_name="$(basename "$skill" .md)"
+        target_dir="$HOME/.codex/skills/$skill_name"
+        mkdir -p "$target_dir"
+        ln -sf "$skill" "$target_dir/SKILL.md"
+    done
+fi
+
 echo "Done! Restart your shell or run: source ~/.bashrc"
