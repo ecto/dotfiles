@@ -53,3 +53,7 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
 fi
 
 PS1=' \e[0;32m\]\w\[\e[0m\] \e[0;36m\]∫\[\e[0m\] '
+
+# user-local binaries (claude code, pip --user, etc). fedora/ubuntu stock
+# bashrcs add this; ours replaces them.
+export PATH="$HOME/.local/bin:$PATH"
